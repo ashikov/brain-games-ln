@@ -15,6 +15,10 @@
     "babel-version": "babel --version",
     "prepublishOnly": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashikov/frontend-project-lvl1.git"
+  },
   "author": "ln",
   "license": "ISC",
   "dependencies": {
@@ -23,5 +27,8 @@
     "@babel/node": "^7.5.0",
     "@babel/preset-env": "^7.5.4",
     "readline-sync": "^1.4.9"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1"
   }
 }
