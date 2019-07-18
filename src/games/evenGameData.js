@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import { getRandomIntInclusive } from '..';
 
 const description = () => {
     return console.log('Answer "yes" if number even otherwise answer "no".');
@@ -7,11 +8,11 @@ const description = () => {
 const isEven = (num) => num % 2 === 0;
 
 const getQuestion = (min, max) => () => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    return getRandomIntInclusive(min, max);
 };
 
-const getAnswer = (getQuestion) => {
-    return readlineSync.question(`Question: ${getQuestion} `);
+const getAnswer = (question) => {
+    return readlineSync.question(`Question: ${question} `);
 };
 
 const getSolution = (question) => isEven(question) ? 'yes' : 'no';
