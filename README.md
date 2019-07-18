@@ -4,6 +4,6 @@
 # Examples
 [Installation](https://asciinema.org/a/WHAKN8mNHCp46MQpkHGevNj7d "Installation example on asciinema.org")
 
-[Gameplay of brain-even](https://asciinema.org/a/LhES8NcfIxcMVIyBsgh45BWSV "Gameplay of brain-even on asciinema.org")
+[Gameplay of brain-even](https://asciinema.org/a/G39PwfXxPxVDlu1neR1tg5iPh "Gameplay of brain-even on asciinema.org")
 
-[Gameplay of brain-calc](https://asciinema.org/a/mppXLcU6p7xfQCXhRJgiTClg4 "Gameplay of brain-calc on asciinema.org")
+[Gameplay of brain-calc](https://asciinema.org/a/biQcWVLMn13DADVJmB72y4FI0 "Gameplay of brain-calc on asciinema.org")
