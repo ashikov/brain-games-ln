@@ -1,7 +1,8 @@
 #!/usr/bin/node
 
 import engine from '../engine';
-import {description, getQuestion, getAnswer, getSolution} from '../games/calcGameData';
+import { description, getQuestion, getSolution } from '../games/calcGameData';
+import { getAnswer } from '..';
 
 engine(
     description,
@@ -9,4 +10,4 @@ engine(
     getAnswer,
     getSolution,
     3,
-    );
+);

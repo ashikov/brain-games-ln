@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { getRandomIntInclusive } from '..';
 
 const description = () => {
@@ -11,11 +10,8 @@ const getQuestion = (min, max) => () => {
     return getRandomIntInclusive(min, max);
 };
 
-const getAnswer = (question) => {
-    console.log(`Question: ${question}`);
-    return readlineSync.question(`Your answer: `);
-};
+
 
 const getSolution = (question) => isEven(question) ? 'yes' : 'no';
 
-export { description, getQuestion, getAnswer, getSolution };
+export { description, getQuestion, getSolution };
