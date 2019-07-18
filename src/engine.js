@@ -7,7 +7,7 @@ const engine = (description, getQuestion, getAnswer, getSolution, rounds) => {
     const userName = askUserName();
 
     for (let i = 1; i <= rounds; i += 1) {
-        const question = getQuestion();
+        const question = getQuestion('question');
         const answer = getAnswer(question);
         const solution = getSolution(question);
 

@@ -10,8 +10,6 @@ const getQuestion = (min, max) => () => {
     return getRandomIntInclusive(min, max);
 };
 
-
-
 const getSolution = (question) => isEven(question) ? 'yes' : 'no';
 
 export { description, getQuestion, getSolution };
