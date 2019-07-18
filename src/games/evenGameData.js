@@ -12,7 +12,8 @@ const getQuestion = (min, max) => () => {
 };
 
 const getAnswer = (question) => {
-    return readlineSync.question(`Question: ${question} `);
+    console.log(`Question: ${question}`);
+    return readlineSync.question(`Your answer: `);
 };
 
 const getSolution = (question) => isEven(question) ? 'yes' : 'no';
