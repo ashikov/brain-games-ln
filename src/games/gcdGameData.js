@@ -12,15 +12,14 @@ const gcd = (a, b) => {
     return gcd(b, a % b);
 };
 
-const getQuestion = (min, max) => () => {
+const question = (min, max) => ()  => {
     const number1 = getRandomIntInclusive(min, max);
     const number2 = getRandomIntInclusive(min, max);
 
-    return `${number1} ${number2}`;
+    const questionText = `${number1} ${number2}`;
+    const result = String(gcd(number1, number2));
+    
+    return { 'text': questionText, 'result': result };
 };
 
-const getSolution = () => {
-    gcd();
-};
-
-export { description, getQuestion, getSolution };
+export { description, question };
