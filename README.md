@@ -7,3 +7,5 @@
 [Gameplay of brain-even](https://asciinema.org/a/G39PwfXxPxVDlu1neR1tg5iPh "Gameplay of brain-even on asciinema.org")
 
 [Gameplay of brain-calc](https://asciinema.org/a/biQcWVLMn13DADVJmB72y4FI0 "Gameplay of brain-calc on asciinema.org")
+
+[Gameplay of brain-gcd](https://asciinema.org/a/fzRwR6rpRsdUjQB6Kwp9tZieK "Gameplay of brain-gcd on asciinema.org")
