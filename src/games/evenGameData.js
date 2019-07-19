@@ -6,10 +6,11 @@ const description = () => {
 
 const isEven = (num) => num % 2 === 0;
 
-const getQuestion = (min, max) => () => {
-    return getRandomIntInclusive(min, max);
+const question = (min, max) => () => {
+    const number = getRandomIntInclusive(min, max);
+    const result = isEven(number) ? 'yes' : 'no';
+
+    return { 'text': number, 'result': result};
 };
 
-const getSolution = (question) => isEven(question) ? 'yes' : 'no';
-
-export { description, getQuestion, getSolution };
+export { description, question };

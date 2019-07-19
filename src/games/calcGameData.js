@@ -18,15 +18,16 @@ const getOperation = () => {
     }
 };
 
-const getQuestion = (min, max) => () => {
+const question = (min, max) => () => {
     const number1 = getRandomIntInclusive(min, max);
     const number2 = getRandomIntInclusive(min, max);
     const operation = getOperation();
 
-    return `${number1} ${operation} ${number2}`;
+    const expression = `${number1} ${operation} ${number2}`;
+    const result = String(eval(expression));
+
+    return { 'text': expression, 'result': result };
 };
 
 
-const getSolution = (question) => String(eval(question));
-
-export { description, getQuestion, getSolution };
+export { description, question };
