@@ -11,3 +11,5 @@
 [Gameplay of brain-gcd](https://asciinema.org/a/fzRwR6rpRsdUjQB6Kwp9tZieK "Gameplay of brain-gcd on asciinema.org")
 
 [Gameplay of brain-progression](https://asciinema.org/a/fVlreDgN2V24XsH1JjDn5cpml "Gameplay of brain-progression on asciinema.org")
+
+[Gameplay of brain-prime](https://asciinema.org/a/tzPqNsxqG9wk6HHImoCxKAMHC "Gameplay of brain-prime on asciinema.org")
