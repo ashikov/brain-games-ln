@@ -18,7 +18,7 @@ const getOperation = () => {
     }
 };
 
-const question = (min, max) => () => {
+const gameData = (min, max) => () => {
     const number1 = getRandomIntInclusive(min, max);
     const number2 = getRandomIntInclusive(min, max);
     const operation = getOperation();
@@ -26,8 +26,8 @@ const question = (min, max) => () => {
     const expression = `${number1} ${operation} ${number2}`;
     const result = String(eval(expression));
 
-    return { 'text': expression, 'result': result };
+    return { 'questionText': expression, 'result': result };
 };
 
 
-export { description, question };
+export { description, gameData };
