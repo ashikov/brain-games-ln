@@ -4,7 +4,7 @@ const description = () => {
     return console.log('Answer "yes" if number even otherwise answer "no".');
 };
 
-const isEven = (num) => num % 2 === 0;
+const isEven = num => num % 2 === 0;
 
 const gameData = (min, max) => () => {
     const number = getRandomIntInclusive(min, max);

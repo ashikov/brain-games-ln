@@ -32,9 +32,9 @@ const gameData = (min, max) => () => {
     const randomIndex = getRandomIntInclusive(0, seqArrayLength - 1);
     const searchingItem = seqArray[randomIndex];
 
-    const hidedItemArray = hideItem(seqArray, searchingItem);
+    const hideItemInArray = hideItem(seqArray, searchingItem);
 
-    const questionText = hidedItemArray.join(' ');
+    const questionText = hideItemInArray.join(' ');
     const result = String(searchingItem);
 
     return { 'questionText': questionText, 'result': result };
