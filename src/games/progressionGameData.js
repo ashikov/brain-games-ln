@@ -1,10 +1,11 @@
-import { getRandomIntInclusive } from '..';
+import getRandomIntInclusive from '../supportFunctions';
+import engine from '../engine';
 
 const description = () => console.log('What number is missing in the progression?');
 
-const getSequenceArray = (startNumber, seqStep) => {
+const generateSequence = (startNumber, sequenceStep, sequenceLength = 10) => {
   const iter = (counter, step, acc) => {
-    if (counter === 10) { // counter is the length of sequence
+    if (counter === sequenceLength) {
       return acc;
     }
 
@@ -14,26 +15,25 @@ const getSequenceArray = (startNumber, seqStep) => {
     return iter(counter + 1, step, acc.concat(currentElement));
   };
 
-  return iter(1, seqStep, [startNumber]);
+  return iter(1, sequenceStep, [startNumber]);
 };
 
-const hideItem = (array, searchingItem) => array.map(x => (x === searchingItem ? x = '..' : x));
+const hideItem = (array, searchingItem) => array.map(x => (x === searchingItem ? '..' : x));
 
-const gameData = (min, max) => () => {
-  const startNumber = getRandomIntInclusive(min, max);
-  const seqStep = getRandomIntInclusive(1, 10); // random sequence step from interval
+const generateRoundData = () => {
+  const startNumber = getRandomIntInclusive();
+  const sequenceStep = getRandomIntInclusive(1, 10);
+  const sequence = generateSequence(startNumber, sequenceStep);
+  const sequenceLength = sequence.length;
+  const randomIndex = getRandomIntInclusive(0, sequenceLength - 1);
+  const itemForHide = sequence[randomIndex];
 
-  const seqArray = getSequenceArray(startNumber, seqStep);
-  const seqArrayLength = seqArray.length;
-  const randomIndex = getRandomIntInclusive(0, seqArrayLength - 1);
-  const searchingItem = seqArray[randomIndex];
+  const hideItemInSequence = hideItem(sequence, itemForHide);
 
-  const hideItemInArray = hideItem(seqArray, searchingItem);
+  const questionText = hideItemInSequence.join(' ');
+  const answer = String(itemForHide);
 
-  const questionText = hideItemInArray.join(' ');
-  const result = String(searchingItem);
-
-  return { questionText, result };
+  return { questionText, answer };
 };
 
-export { description, gameData };
+export default () => engine(description, generateRoundData);

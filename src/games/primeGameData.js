@@ -1,4 +1,5 @@
-import { getRandomIntInclusive } from '..';
+import getRandomIntInclusive from '../supportFunctions';
+import engine from '../engine';
 
 const description = () => console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
@@ -16,11 +17,11 @@ const isPrime = (number) => {
   return true;
 };
 
-const gameData = (min, max) => () => {
-  const number = getRandomIntInclusive(min, max);
-  const result = isPrime(number) ? 'yes' : 'no';
+const generateRoundData = () => {
+  const question = getRandomIntInclusive();
+  const answer = isPrime(question) ? 'yes' : 'no';
 
-  return { questionText: String(number), result };
+  return { questionText: String(question), answer };
 };
 
-export { description, gameData };
+export default () => engine(description, generateRoundData);

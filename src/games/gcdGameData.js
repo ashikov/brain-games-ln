@@ -1,23 +1,24 @@
-import { getRandomIntInclusive } from '..';
+import getRandomIntInclusive from '../supportFunctions';
+import engine from '../engine';
 
 const description = () => console.log('Find the greatest common divisor of given numbers.');
 
-const gcd = (a, b) => {
+const findGCD = (a, b) => {
   if (!b) {
     return a;
   }
 
-  return gcd(b, a % b);
+  return findGCD(b, a % b);
 };
 
-const gameData = (min, max) => () => {
-  const number1 = getRandomIntInclusive(min, max);
-  const number2 = getRandomIntInclusive(min, max);
+const generateRoundData = () => {
+  const number1 = getRandomIntInclusive();
+  const number2 = getRandomIntInclusive();
 
   const questionText = `${number1} ${number2}`;
-  const result = String(gcd(number1, number2));
+  const answer = String(findGCD(number1, number2));
 
-  return { questionText, result };
+  return { questionText, answer };
 };
 
-export { description, gameData };
+export default () => engine(description, generateRoundData);

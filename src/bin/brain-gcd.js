@@ -1,12 +1,5 @@
 #!/usr/bin/node
 
-import engine from '../engine';
-import { description, gameData } from '../games/gcdGameData';
-import { getAnswer } from '..';
+import startGame from '../games/gcdGameData';
 
-engine(
-  description,
-  gameData(1, 47), // specify the interval for random
-  getAnswer,
-  3,
-);
+startGame();
