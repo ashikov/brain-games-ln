@@ -1,14 +1,15 @@
-import { getRandomIntInclusive } from '..';
+import getRandomIntInclusive from '../supportFunctions';
+import engine from '../engine';
 
 const description = () => console.log('Answer "yes" if number even otherwise answer "no".');
 
 const isEven = num => num % 2 === 0;
 
-const gameData = (min, max) => () => {
-  const number = getRandomIntInclusive(min, max);
-  const result = isEven(number) ? 'yes' : 'no';
+const generateRoundData = () => {
+  const question = getRandomIntInclusive();
+  const answer = isEven(question) ? 'yes' : 'no';
 
-  return { questionText: number, result };
+  return { questionText: question, answer };
 };
 
-export { description, gameData };
+export default () => engine(description, generateRoundData);
