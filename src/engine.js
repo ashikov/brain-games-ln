@@ -1,4 +1,4 @@
-import { askUserName } from ".";
+import { askUserName } from '.';
 
 const engine = (description, question, getAnswer, rounds) => {
     console.log('Welcome to the Brain Games!');
