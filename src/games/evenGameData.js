@@ -1,7 +1,7 @@
 import getRandomIntInclusive from '../supportFunctions';
 import engine from '../engine';
 
-const description = () => console.log('Answer "yes" if number even otherwise answer "no".');
+const showDescription = () => console.log('Answer "yes" if number even otherwise answer "no".');
 
 const isEven = num => num % 2 === 0;
 
@@ -12,4 +12,4 @@ const generateRoundData = () => {
   return { questionText: question, answer };
 };
 
-export default () => engine(description, generateRoundData);
+export default () => engine(showDescription, generateRoundData);

@@ -1,7 +1,7 @@
 import getRandomIntInclusive from '../supportFunctions';
 import engine from '../engine';
 
-const description = () => console.log('What number is missing in the progression?');
+const showDescription = () => console.log('What number is missing in the progression?');
 
 const generateSequence = (startNumber, sequenceStep, sequenceLength = 10) => {
   const iter = (counter, step, acc) => {
@@ -36,4 +36,4 @@ const generateRoundData = () => {
   return { questionText, answer };
 };
 
-export default () => engine(description, generateRoundData);
+export default () => engine(showDescription, generateRoundData);

@@ -1,7 +1,7 @@
 import getRandomIntInclusive from '../supportFunctions';
 import engine from '../engine';
 
-const description = () => console.log('Find the greatest common divisor of given numbers.');
+const showDescription = () => console.log('Find the greatest common divisor of given numbers.');
 
 const findGCD = (a, b) => {
   if (!b) {
@@ -21,4 +21,4 @@ const generateRoundData = () => {
   return { questionText, answer };
 };
 
-export default () => engine(description, generateRoundData);
+export default () => engine(showDescription, generateRoundData);

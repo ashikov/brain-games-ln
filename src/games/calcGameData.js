@@ -1,7 +1,7 @@
 import getRandomIntInclusive from '../supportFunctions';
 import engine from '../engine';
 
-const description = () => console.log('What is the result of the expression?');
+const showDescription = () => console.log('What is the result of the expression?');
 
 const generateRoundData = () => {
   const number1 = getRandomIntInclusive();
@@ -18,4 +18,4 @@ const generateRoundData = () => {
 };
 
 
-export default () => engine(description, generateRoundData);
+export default () => engine(showDescription, generateRoundData);
