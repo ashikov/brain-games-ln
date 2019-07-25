@@ -3,12 +3,12 @@ import engine from '../engine';
 
 const showDescription = () => console.log('Find the greatest common divisor of given numbers.');
 
-const findGCD = (a, b) => {
-  if (!b) {
-    return a;
+const findGCD = (number1, number2) => {
+  if (!number2) {
+    return number1;
   }
 
-  return findGCD(b, a % b);
+  return findGCD(number2, number1 % number2);
 };
 
 const generateRoundData = () => {

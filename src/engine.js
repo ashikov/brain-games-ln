@@ -6,7 +6,7 @@ const engine = (showDescription, generateRoundData, numberOfRounds = 3) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  for (let roundsCounter = 1; roundsCounter <= numberOfRounds; roundsCounter += 1) {
+  for (let roundsCount = 1; roundsCount <= numberOfRounds; roundsCount += 1) {
     const roundData = generateRoundData();
     const rightAnswer = roundData.answer;
 
