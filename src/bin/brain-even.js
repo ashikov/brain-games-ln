@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
-import startGame from '../games/evenGameData';
+import startGame from '../game/even';
 
 startGame();

@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
-import startGame from '../games/progressionGameData';
+import startGame from '../game/progression';
 
 startGame();
