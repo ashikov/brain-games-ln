@@ -3,12 +3,12 @@ import engine from '../engine';
 
 const showDescription = () => console.log('What is the result of the expression?');
 
-const generateRoundData = () => {
+const operators = ['+', '-', '*'];
+
+const generateRoundData = (operations) => {
   const number1 = getRandomIntInclusive();
   const number2 = getRandomIntInclusive();
-  const operations = ['+', '-', '*'];
-  const operationsQuantity = operations.length;
-  const operation = operations[getRandomIntInclusive(0, operationsQuantity - 1)];
+  const operation = operations[getRandomIntInclusive(0, operations.lenght - 1)];
 
   const expression = `${number1} ${operation} ${number2}`;
   // eslint-disable-next-line no-eval
@@ -18,4 +18,4 @@ const generateRoundData = () => {
 };
 
 
-export default () => engine(showDescription, generateRoundData);
+export default () => engine(showDescription, generateRoundData(operators));
