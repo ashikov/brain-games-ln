@@ -10,9 +10,10 @@ const engine = (description, generateRoundData) => {
 
   for (let roundsCounter = 1; roundsCounter <= roundsCount; roundsCounter += 1) {
     const roundData = generateRoundData();
-    const rightAnswer = roundData.answer;
 
-    console.log(`Question: ${roundData.questionText}`);
+    const { questionText, answer: rightAnswer } = roundData;
+
+    console.log(`Question: ${questionText}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (rightAnswer !== userAnswer) {
