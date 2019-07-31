@@ -30,9 +30,9 @@ const generateRoundData = () => {
 
   sequence[randomIndex] = '..';
 
-  const questionText = sequence.join(' ');
+  const question = sequence.join(' ');
 
-  return { questionText, answer };
+  return { question, answer };
 };
 
 export default () => engine(description, generateRoundData);

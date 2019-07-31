@@ -24,7 +24,7 @@ const generateRoundData = () => {
   const question = getRandomInt();
   const answer = isPrime(question) ? 'yes' : 'no';
 
-  return { questionText: String(question), answer };
+  return { question: String(question), answer };
 };
 
 export default () => engine(description, generateRoundData);

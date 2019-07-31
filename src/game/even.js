@@ -6,10 +6,10 @@ const description = 'Answer "yes" if number even otherwise answer "no".';
 const isEven = num => num % 2 === 0;
 
 const generateRoundData = () => {
-  const questionText = getRandomInt();
-  const answer = isEven(questionText) ? 'yes' : 'no';
+  const question = getRandomInt();
+  const answer = isEven(question) ? 'yes' : 'no';
 
-  return { questionText, answer };
+  return { question, answer };
 };
 
 export default () => engine(description, generateRoundData);

@@ -24,7 +24,7 @@ const generateRoundData = operatorsStorage => () => {
 
   const answer = String(operatorsStorage[operation](number1, number2));
 
-  return { questionText: expression, answer };
+  return { question: expression, answer };
 };
 
 

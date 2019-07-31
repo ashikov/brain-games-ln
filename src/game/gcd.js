@@ -15,10 +15,10 @@ const generateRoundData = () => {
   const number1 = getRandomInt();
   const number2 = getRandomInt();
 
-  const questionText = `${number1} ${number2}`;
+  const question = `${number1} ${number2}`;
   const answer = String(findGCD(number1, number2));
 
-  return { questionText, answer };
+  return { question, answer };
 };
 
 export default () => engine(description, generateRoundData);
