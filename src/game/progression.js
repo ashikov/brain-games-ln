@@ -20,20 +20,17 @@ const generateSequence = (startNumber, sequenceStep) => {
   return iter(1, sequenceStep, [startNumber]);
 };
 
-const hideItem = (items, searchingItem) => items.map(x => (x === searchingItem ? '..' : x));
-
 const generateRoundData = () => {
   const firstTerm = getRandomInt();
   const sequenceStep = getRandomInt(1, 10);
   const sequence = generateSequence(firstTerm, sequenceStep);
-  const sequenceLength = sequence.length;
-  const randomIndex = getRandomInt(0, sequenceLength - 1);
-  const itemForHide = sequence[randomIndex];
+  const randomIndex = getRandomInt(0, sequence.length - 1);
 
-  const hiddenItemInSequence = hideItem(sequence, itemForHide);
+  const answer = String(sequence[randomIndex]);
 
-  const questionText = hiddenItemInSequence.join(' ');
-  const answer = String(itemForHide);
+  sequence[randomIndex] = '..';
+
+  const questionText = sequence.join(' ');
 
   return { questionText, answer };
 };
