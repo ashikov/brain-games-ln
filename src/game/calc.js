@@ -1,21 +1,31 @@
-import getRandomIntInclusive from '../supportFunctions';
+import getRandomInt from '../utils';
 import engine from '../engine';
 
-const showDescription = () => console.log('What is the result of the expression?');
+const description = 'What is the result of the expression?';
 
-const operators = ['+', '-', '*'];
+const calculator = {
+  '+': (x, y) => x + y,
+  '-': (x, y) => x - y,
+  '*': (x, y) => x * y,
+};
 
-const generateRoundData = (operations) => {
-  const number1 = getRandomIntInclusive();
-  const number2 = getRandomIntInclusive();
-  const operation = operations[getRandomIntInclusive(0, operations.lenght - 1)];
+const getOperator = (operatorsStorage) => {
+  const operators = Object.keys(operatorsStorage);
+
+  return operators[getRandomInt(0, operators.length - 1)];
+};
+
+const generateRoundData = operatorsStorage => () => {
+  const number1 = getRandomInt();
+  const number2 = getRandomInt();
+  const operation = getOperator(operatorsStorage);
 
   const expression = `${number1} ${operation} ${number2}`;
-  // eslint-disable-next-line no-eval
-  const answer = String(eval(expression));
+
+  const answer = String(operatorsStorage[operation](number1, number2));
 
   return { questionText: expression, answer };
 };
 
 
-export default () => engine(showDescription, generateRoundData(operators));
+export default () => engine(description, generateRoundData(calculator));

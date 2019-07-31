@@ -1,10 +1,12 @@
-import getRandomIntInclusive from '../supportFunctions';
+import getRandomInt from '../utils';
 import engine from '../engine';
 
-const showDescription = () => console.log('What number is missing in the progression?');
+const description = 'What number is missing in the progression?';
 
-const generateSequence = (startNumber, sequenceStep, sequenceLength = 10) => {
+const generateSequence = (startNumber, sequenceStep) => {
   const iter = (counter, step, acc) => {
+    const sequenceLength = 10;
+
     if (counter === sequenceLength) {
       return acc;
     }
@@ -18,22 +20,22 @@ const generateSequence = (startNumber, sequenceStep, sequenceLength = 10) => {
   return iter(1, sequenceStep, [startNumber]);
 };
 
-const hideItem = (array, searchingItem) => array.map(x => (x === searchingItem ? '..' : x));
+const hideItem = (items, searchingItem) => items.map(x => (x === searchingItem ? '..' : x));
 
 const generateRoundData = () => {
-  const startNumber = getRandomIntInclusive();
-  const sequenceStep = getRandomIntInclusive(1, 10);
-  const sequence = generateSequence(startNumber, sequenceStep);
+  const firstTerm = getRandomInt();
+  const sequenceStep = getRandomInt(1, 10);
+  const sequence = generateSequence(firstTerm, sequenceStep);
   const sequenceLength = sequence.length;
-  const randomIndex = getRandomIntInclusive(0, sequenceLength - 1);
+  const randomIndex = getRandomInt(0, sequenceLength - 1);
   const itemForHide = sequence[randomIndex];
 
-  const hideItemInSequence = hideItem(sequence, itemForHide);
+  const hiddenItemInSequence = hideItem(sequence, itemForHide);
 
-  const questionText = hideItemInSequence.join(' ');
+  const questionText = hiddenItemInSequence.join(' ');
   const answer = String(itemForHide);
 
   return { questionText, answer };
 };
 
-export default () => engine(showDescription, generateRoundData);
+export default () => engine(description, generateRoundData);

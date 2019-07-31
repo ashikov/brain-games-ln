@@ -1,16 +1,17 @@
-import getRandomIntInclusive from '../supportFunctions';
+import getRandomInt from '../utils';
 import engine from '../engine';
 
-const showDescription = () => console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
+  if (number < 2) {
+    return false;
+  }
   if (number === 2) {
     return true;
   }
 
-  const division = Math.floor(Math.sqrt(number));
-
-  for (let divisor = 2; divisor <= division; divisor += 1) {
+  for (let divisor = 2; divisor <= Math.sqrt(number); divisor += 1) {
     if (number % divisor === 0) {
       return false;
     }
@@ -20,10 +21,10 @@ const isPrime = (number) => {
 };
 
 const generateRoundData = () => {
-  const question = getRandomIntInclusive();
+  const question = getRandomInt();
   const answer = isPrime(question) ? 'yes' : 'no';
 
   return { questionText: String(question), answer };
 };
 
-export default () => engine(showDescription, generateRoundData);
+export default () => engine(description, generateRoundData);
