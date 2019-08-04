@@ -3,21 +3,18 @@ import engine from '../engine';
 
 const description = 'What number is missing in the progression?';
 
-const generateSequence = (startNumber, sequenceStep) => {
-  const iter = (counter, step, acc) => {
-    const sequenceLength = 10;
+const sequenceLength = 10;
 
-    if (counter === sequenceLength) {
+const generateSequence = (firstTerm, sequenceStep) => {
+  const iter = (currentTerm, acc) => {
+    if (acc.length === sequenceLength) {
       return acc;
     }
 
-    const preveousElement = acc[counter - 1];
-    const currentElement = preveousElement + step;
-
-    return iter(counter + 1, step, acc.concat(currentElement));
+    return iter(currentTerm + sequenceStep, acc.concat(currentTerm));
   };
 
-  return iter(1, sequenceStep, [startNumber]);
+  return iter(firstTerm, []);
 };
 
 const generateRoundData = () => {

@@ -3,29 +3,23 @@ import engine from '../engine';
 
 const description = 'What is the result of the expression?';
 
-const calculator = {
+const operators = {
   '+': (x, y) => x + y,
   '-': (x, y) => x - y,
   '*': (x, y) => x * y,
 };
 
-const getOperator = (operatorsStorage) => {
-  const operators = Object.keys(operatorsStorage);
-
-  return operators[getRandomInt(0, operators.length - 1)];
-};
-
-const generateRoundData = operatorsStorage => () => {
+const generateRoundData = () => {
   const number1 = getRandomInt();
   const number2 = getRandomInt();
-  const operation = getOperator(operatorsStorage);
+  const operation = Object.keys(operators)[getRandomInt(0, Object.keys(operators).length - 1)];
 
-  const expression = `${number1} ${operation} ${number2}`;
+  const question = `${number1} ${operation} ${number2}`;
 
-  const answer = String(operatorsStorage[operation](number1, number2));
+  const answer = String(operators[operation](number1, number2));
 
-  return { question: expression, answer };
+  return { question, answer };
 };
 
 
-export default () => engine(description, generateRoundData(calculator));
+export default () => engine(description, generateRoundData);
