@@ -3,7 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/81b708c59e43460b6fa3/maintainability)](https://codeclimate.com/github/ashikov/frontend-project-lvl1/maintainability)
 [![Build Status](https://travis-ci.org/ashikov/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/ashikov/frontend-project-lvl1)
 
-This project includes 5 simple math games to be launched as CLI.
+This package includes 5 simple math games to be launched as CLI.
 
 ## Requirements
 ![npm](https://www.npmjs.com/get-npm) must be installed in your operating system.
@@ -13,6 +13,9 @@ This project includes 5 simple math games to be launched as CLI.
 ```shell
 npm install -g brain-games-ln
 ```
+
+## Usage
+Type name of the game which you would like to play in the command-line.
 
 ## Games list, description and asciicast2gif gameplay samples
 * __brain-even__
