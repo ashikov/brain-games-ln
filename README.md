@@ -5,6 +5,15 @@
 
 This project includes 5 simple math games to be launched as CLI.
 
+## Requirements
+![npm](https://www.npmjs.com/get-npm) must be installed in your operating system.
+
+## Installation
+
+```shell
+npm install -g brain-games-ln
+```
+
 ## Games list, description and asciicast2gif gameplay samples
 * __brain-even__
 
