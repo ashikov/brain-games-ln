@@ -3,7 +3,7 @@ import engine from '../engine';
 
 const description = 'What is the result of the expression?';
 
-const operators = {
+const operations = {
   '+': (x, y) => x + y,
   '-': (x, y) => x - y,
   '*': (x, y) => x * y,
@@ -12,11 +12,12 @@ const operators = {
 const generateRoundData = () => {
   const number1 = getRandomInt();
   const number2 = getRandomInt();
-  const operation = Object.keys(operators)[getRandomInt(0, Object.keys(operators).length - 1)];
+  const operators = Object.keys(operations);
+  const operation = operators[getRandomInt(0, operators.length - 1)];
 
   const question = `${number1} ${operation} ${number2}`;
 
-  const answer = String(operators[operation](number1, number2));
+  const answer = String(operations[operation](number1, number2));
 
   return { question, answer };
 };

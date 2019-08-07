@@ -21,11 +21,11 @@ const generateRoundData = () => {
   const firstTerm = getRandomInt();
   const sequenceStep = getRandomInt(1, 10);
   const sequence = generateSequence(firstTerm, sequenceStep);
-  const randomIndex = getRandomInt(0, sequence.length - 1);
+  const hiddenElementIndex = getRandomInt(0, sequence.length - 1);
 
-  const answer = String(sequence[randomIndex]);
+  const answer = String(sequence[hiddenElementIndex]);
 
-  sequence[randomIndex] = '..';
+  sequence[hiddenElementIndex] = '..';
 
   const question = sequence.join(' ');
 

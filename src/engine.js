@@ -8,7 +8,7 @@ const engine = (description, generateRoundData) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  for (let roundsCounter = 1; roundsCounter <= roundsCount; roundsCounter += 1) {
+  for (let i = 1; i <= roundsCount; i += 1) {
     const { question, answer: rightAnswer } = generateRoundData();
 
     console.log(`Question: ${question}`);
