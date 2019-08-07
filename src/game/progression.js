@@ -5,7 +5,7 @@ const description = 'What number is missing in the progression?';
 
 const sequenceLength = 10;
 
-const generateSequence = (firstTerm, sequenceStep, progressionLength = 10) => {
+const generateSequence = (firstTerm, sequenceStep, progressionLength) => {
   const iter = (currentTerm, acc) => {
     if (acc.length === progressionLength) {
       return acc;
