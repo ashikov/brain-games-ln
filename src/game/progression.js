@@ -3,11 +3,11 @@ import engine from '../engine';
 
 const description = 'What number is missing in the progression?';
 
-const generateSequence = (firstTerm, sequenceStep) => {
-  const sequenceLength = 10;
+const sequenceLength = 10;
 
+const generateSequence = (firstTerm, sequenceStep, progressionLength = 10) => {
   const iter = (currentTerm, acc) => {
-    if (acc.length === sequenceLength) {
+    if (acc.length === progressionLength) {
       return acc;
     }
 
@@ -20,7 +20,7 @@ const generateSequence = (firstTerm, sequenceStep) => {
 const generateRoundData = () => {
   const firstTerm = getRandomInt();
   const sequenceStep = getRandomInt(1, 10);
-  const sequence = generateSequence(firstTerm, sequenceStep);
+  const sequence = generateSequence(firstTerm, sequenceStep, sequenceLength);
   const hiddenElementIndex = getRandomInt(0, sequence.length - 1);
 
   const answer = String(sequence[hiddenElementIndex]);
