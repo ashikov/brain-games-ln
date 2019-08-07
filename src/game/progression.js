@@ -3,9 +3,9 @@ import engine from '../engine';
 
 const description = 'What number is missing in the progression?';
 
-const sequenceLength = 10;
-
 const generateSequence = (firstTerm, sequenceStep) => {
+  const sequenceLength = 10;
+
   const iter = (currentTerm, acc) => {
     if (acc.length === sequenceLength) {
       return acc;
