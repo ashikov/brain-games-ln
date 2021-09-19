@@ -1,11 +1,11 @@
 # Brain-games
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/81b708c59e43460b6fa3/maintainability)](https://codeclimate.com/github/ashikov/frontend-project-lvl1/maintainability)
-[![Build Status](https://travis-ci.org/ashikov/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/ashikov/frontend-project-lvl1)
 
 This package includes 5 simple math games to be launched as CLI.
 
 ## Requirements
+
 ![npm](https://www.npmjs.com/get-npm) must be installed in your operating system.
 
 ## Installation
@@ -15,15 +15,17 @@ npm install -g brain-games-ln
 ```
 
 ## Usage
+
 Type name of the game which you would like to play in the command-line.
 
 ## Games list, description and asciicast2gif gameplay samples
+
 * __brain-even__
 
 You need to answer whether a given number is even or not.
 
 ![brain-even](/gif/brain-even.gif)
-* __brain-calc__ 
+* __brain-calc__
 
 Adding, subtraction or multiplication of two values.
 

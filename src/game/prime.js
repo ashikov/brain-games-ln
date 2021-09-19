@@ -1,5 +1,5 @@
-import getRandomInt from '../utils';
-import engine from '../engine';
+import getRandomInt from '../utils.js';
+import engine from '../engine.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

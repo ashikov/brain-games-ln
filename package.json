@@ -1,26 +1,18 @@
 {
   "name": "brain-games-ln",
-  "version": "1.0.2",
-  "description": "hexlet project brain-games developed by ln",
+  "version": "1.0.3",
+  "type": "module",
+  "description": "Hexlet project brain-games developed by Lastnorf",
   "bin": {
-    "brain-even": "dist/bin/brain-even.js",
-    "brain-calc": "dist/bin/brain-calc.js",
-    "brain-gcd": "dist/bin/brain-gcd.js",
-    "brain-progression": "dist/bin/brain-progression.js",
-    "brain-prime": "dist/bin/brain-prime.js"
-  },
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "babel-version": "babel --version",
-    "prepublishOnly": "npm run build"
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js",
+    "brain-progression": "bin/brain-progression.js",
+    "brain-prime": "bin/brain-prime.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ashikov/frontend-project-lvl1.git"
+    "url": "git+https://github.com/ashikov/brain-games-ln.git"
   },
   "keywords": [
     "hexlet-project-lvl1",
@@ -34,16 +26,9 @@
   "author": "ln",
   "license": "ISC",
   "dependencies": {
-    "readline-sync": "^1.4.9"
+    "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/node": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "babel-eslint": "^10.0.2",
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint": "^7.0.0"
   }
 }
