@@ -1,5 +1,6 @@
 # Brain-games
 
+[![Main](https://github.com/ashikov/brain-games-ln/actions/workflows/main.yml/badge.svg)](https://github.com/ashikov/brain-games-ln/actions/workflows/main.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/81b708c59e43460b6fa3/maintainability)](https://codeclimate.com/github/ashikov/frontend-project-lvl1/maintainability)
 
 This package includes 5 simple math games to be launched as CLI.
@@ -7,12 +8,6 @@ This package includes 5 simple math games to be launched as CLI.
 ## Requirements
 
 ![npm](https://www.npmjs.com/get-npm) must be installed in your operating system.
-
-## Installation
-
-```shell
-npm install -g brain-games-ln
-```
 
 ## Usage
 
